@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Making sense of Related Events with Azure Logic App and Service Bus"
+title: "Related Events with Logic Apps and Service Bus"
 ---
 
 The ever growing need to co-relate thing is never ending. You can never have enough of sources emitting independent events and messages that are in fact related to each other. It’s normally not an issue if these events and messages are to be processed individually. However, if the need of the hour is to co-relate these events to make sense of the underlying information, well it’s a little bit different.
