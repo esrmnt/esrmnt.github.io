@@ -9,7 +9,7 @@ I recently stumbled upon this need to loop over a fixed set of values using xslt
 
 The first solution was to use the inbuilt document function, something like below
 
-`
+```
 <!--let's say we want to loop over x, y and z-->
 <xsl:variable name="var:valuesToLoopOver"> 
     <item>x</item>
@@ -24,11 +24,11 @@ The first solution was to use the inbuilt document function, something like belo
         <xsl:value-of select="." />
     </data>
 </xsl:for-each>
-`
+```
 
 Look good, works well from visual studio too, only problem is that Azure Integration Account does not likes it. It seems to have and issue with the document(‘’) function, and so the solution had to be built with a kind of recursive call to transformation sub-template.
 
-`
+```
 <xsl:call-template name="valuesToLoopOver">
     <xsl:with-param name="values" select="'x,y,z,'" />
 </xsl:call-template>
@@ -45,4 +45,4 @@ Look good, works well from visual studio too, only problem is that Azure Integra
             </xsl:call-template>
     </xsl:if>
 </xsl:template>
-`
+```
