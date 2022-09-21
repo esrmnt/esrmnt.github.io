@@ -1,9 +1,9 @@
-title: no style, please! # name of the site
+title: error code 69 ! # name of the site
 author: esrmnt # name of site's author
 email: nitish.er@gmail.com # email of site's author
-url: https://esrmnt.github.io # root address of the site
+url: https://blog.estmnt.dev # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
-description: A minimal no-style blog on thoughts and ideas.
+description: A minimal no-style blog for thoughts and ideas.
 permalink: 
 
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
