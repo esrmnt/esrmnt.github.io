@@ -13,15 +13,15 @@ We begin by using Logic App to pick up an initial message from the service bus. 
 
 The below image depicts the overall process flow
 
-![logic-app-flow-overview](../assets/images/logic-app-flow-overview.png)
+![logic-app-flow-overview](/esrmnt.github.io/assets/logic-app-flow-overview.png)
 
 Notice the parallel shape following the completion of initial message in the service bus. The branch on the left polls the Service Bus, for messages with same event id as the initial message. When it finds no more messages, pending in the queue, it sets the “isDone” flag to true.
 
-![logic-app-sub-flow-pick-message](../assets/images/logic-app-sub-flow-pick-messages.png)
+![logic-app-sub-flow-pick-message](/esrmnt.github.io/assets/logic-app-sub-flow-pick-messages.png)
 
 While the sub-flow on the left is picking up the messages, the parallel branch on the right checks if the message pickup is still in progress using the “isDone” flag. While the flag is false, the right sub-flow would renew the lock the message in the Service Bus and introduce a delay of a couple of seconds to let source push pending events (if any) to the service bus.
 
-![logic-app-sub-flow-renew-lock](../assets/images/logic-app-sub-flow-renew-lock.png)
+![logic-app-sub-flow-renew-lock](/esrmnt.github.io/assets/logic-app-sub-flow-renew-lock.png)
 
 The renewal of lock on the session, is of at-most importance for the messages with the said session id to be picked up by the left sub-flow.
 
