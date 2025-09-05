@@ -1,0 +1,334 @@
+/* =============================================================================
+   JEKYLL BEAR THEME - PINE FOREST AESTHETIC
+   ============================================================================= */
+/* =============================================================================
+   FONTS & IMPORTS
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* =============================================================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   ============================================================================= */
+
+:root {
+    /* Layout */
+    --width: 720px;
+    
+    /* Typography */
+    --font-main: 'IBM Plex Mono', monospace;
+    --font-secondary: 'IBM Plex Mono', monospace;
+    --font-monospace: 'IBM Plex Mono', monospace;
+    --font-scale: 0.9em;
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    
+    /* Border radius */
+    --radius-sm: 3px;
+    --radius-md: 5px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    
+    /* Z-index scale */
+    --z-dropdown: 200;
+    --z-modal: 1000;
+    
+    /* Pine Forest Theme Colors - Light Mode */
+    --background-color: #F5F7F3; /* Light pine needle mist */
+    --heading-color: #1A3025; /* Deep forest green */
+    --text-color: #0F2018; /* Dark pine shadow */
+    --link-color: #2D5016; /* Forest moss */
+    --visited-color: #1E3A11; /* Deep woodland */
+    --main-color: #4A7C59; /* Pine needle green */
+    --code-background-color: #E8EDEA; /* Frosted pine */
+    --code-color: #1A3025; /* Deep forest green */
+    --blockquote-color: #7A9B85; /* Sage green */
+    
+    /* Interactive colors derived from theme */
+    --hover-color: white;
+    --border-color: var(--blockquote-color);
+    --shadow-color: rgba(0, 0, 0, 0.18);
+    
+    /* Glow effects for interactive elements */
+    --glow-color-light: rgba(45, 80, 22, 0.3);
+    --glow-color-medium: rgba(45, 80, 22, 0.5);
+}
+
+/* Dark Mode Color Overrides */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #0D1B12; /* Dark pine shadow */
+        --heading-color: #C8D8CE; /* Light pine mist */
+        --text-color: #E0EADE; /* Pale forest light */
+        --link-color: #7AB069; /* Bright moss green */
+        --visited-color: #9BC490; /* Light woodland */
+        --main-color: #8BB899; /* Soft pine green */
+        --code-background-color: #1A2B1F; /* Dark evergreen */
+        --code-color: #C8D8CE; /* Light pine mist */
+        --blockquote-color: #4A6B52; /* Forest undergrowth */
+        
+        /* Dark mode glow effects */
+        --glow-color-light: rgba(122, 176, 105, 0.3);
+        --glow-color-medium: rgba(122, 176, 105, 0.5);
+    }
+}
+
+/* =============================================================================
+   BASE STYLES
+   ============================================================================= */
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: var(--spacing-md);
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+/* =============================================================================
+   TYPOGRAPHY
+   ============================================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+strong, b {
+    color: var(--heading-color);
+}
+
+/* =============================================================================
+   LINKS
+   ============================================================================= */
+
+a {
+    color: var(--link-color);
+    font-family: var(--font-main);
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 3px solid var(--main-color);
+    transition: all var(--transition-fast) ease;
+}
+
+a:hover {
+    background-color: var(--main-color);
+    color: var(--hover-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--visited-color);
+}
+
+/* External link marker */
+a[href^="http"]:where(:not([href*="knhash.in/"])):not(:has(img))::after {
+    content: "↗";
+    font-family: var(--font-monospace);
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+/* =============================================================================
+   LAYOUT COMPONENTS
+   ============================================================================= */
+
+header {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 3px dotted var(--main-color);
+}
+
+nav a {
+    margin-right: 8px;
+}
+
+main {
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: var(--spacing-lg);
+    border-top: 3px dotted var(--main-color);
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer > span:has(a[href="https://bearblog.dev"]) {
+    display: none;
+}
+
+/* =============================================================================
+   CONTENT ELEMENTS
+   ============================================================================= */
+
+hr {
+    border: 0;
+    border-top: 1px dashed var(--border-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    border-left: 1px solid var(--blockquote-color);
+    color: var(--code-color);
+    padding-left: var(--spacing-md);
+    font-style: italic;
+}
+
+/* =============================================================================
+   CODE & SYNTAX HIGHLIGHTING
+   ============================================================================= */
+
+code {
+    font-family: var(--font-monospace);
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: var(--radius-sm);
+}
+
+.highlight,
+.code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: var(--radius-sm);
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+/* =============================================================================
+   TABLES
+   ============================================================================= */
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+    font-size: 1em;
+}
+
+/* =============================================================================
+   BLOG POST LISTINGS
+   ============================================================================= */
+
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li {
+    display: flex;
+    margin-bottom: var(--spacing-sm);
+}
+
+ul.blog-posts li span {
+    flex: 0 0 130px;
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+i time {
+    font-style: normal;
+    opacity: 0.7;
+}
+
+/* =============================================================================
+   UTILITY CLASSES
+   ============================================================================= */
+
+.inline {
+    width: auto !important;
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+/* =============================================================================
+   FORM ELEMENTS
+   ============================================================================= */
+
+input, button, textarea, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+legend {
+    margin: var(--spacing-md) 0;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin: 0 0 var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    color: var(--text-color);
+    background: var(--code-background-color);
+    border: 2px solid var(--link-color);
+    border-radius: var(--radius-md);
+}
+
+input {
+    width: 55%;
+}
+
+textarea {
+    width: 95%;
+}
+
+input[type=button], 
+input[type=submit], 
+input[type=reset] {
+    margin: 0 0 var(--spacing-md);
+    padding: 7px;
+    font-family: var(--font-secondary);
+    font-weight: bold;
+    color: var(--background-color);
+    background: var(--link-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+}
+
+::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+      
+  

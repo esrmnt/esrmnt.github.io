@@ -1,34 +1,30 @@
 ---
 layout: default
-title: Home
+title: Hello
 ---
 
-<p class="tagline">{{ site.description }}</p>
 
-<hr class="dotted-separator" />
+## An easy to use, minimal, text focused Jekyll theme
 
-<div class="post-table">
-  {% assign shown_posts = "" | split: "" %}
-  {% assign sorted_tags = site.tags | sort %}
-  {% for tag in sorted_tags %}
-    {% for post in tag[1] %}
-      {% unless shown_posts contains post.url %}
-      <div class="post-row">
-        <div class="post-date">{{ post.date | date: "%d %b, %Y" }}</div>
-        <div class="post-title-wrap">
-          <a class="post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </div>
-      </div>
-      {% assign shown_posts = shown_posts | push: post.url %}
-    {% endunless %}
-    {% endfor %}
-  {% endfor %}
-</div>
+[Bear Blog](https://bearblog.dev/) is *"a blogging platform where words matter most"*. 
 
-<div class="tag-list">
-  {% for tag in sorted_tags %}
-    <span class="tag-label">#{{ tag[0] }}</span>
-  {% endfor %}
-</div>
+This is a port of it's theme to Jekyll, with some tweaks. So you can use GitHub Pages to host your blog while getting the same awesome Bear Blog feels.
 
-<hr class="dotted-separator" />
+**Stop worrying about the style, focus on your writing.**
+
+- Looks great on *any* device
+- Tiny, optimized, and awesome pages
+- No trackers, ads, or scripts, *did I mention minimal already?*
+- Auto light and dark themes
+- Tag support, to filter blog pages
+- Quick, *15 minute* setup
+- Gallery view for your images
+- Code highlighting
+
+Have a look around, this website is already themed with **jekyllBear**. If you like it, head over to the GitHub [repository](https://github.com/knhash/jekyllBear) for installation instructions.
+
+#### New: Life in Weeks Interactive Timeline
+
+- Visualize your life weeks, inspired by [Wait But Why](https://waitbutwhy.com/2014/05/life-weeks.html) and [Buster Benson](https://busterbenson.com/life-in-weeks/) and cycle through key events with up/down arrows.
+
+Try it on the [Life in Weeks](https://knhash.in/jekyllBear/life) page!
