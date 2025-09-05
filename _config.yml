@@ -1,12 +1,11 @@
 ###########
 # site.title
 
-title: jekyllBear
-description: a minimal, text focused blog theme
+title: esrmnt
+description: a minimal, text focused notes to self
 # baseurl: "/jekyllBear" # the subpath of your site, e.g. /blog/
 url: "https://esrmnt.github.io" # the base hostname & protocol for your site
 # host: 0.0.0.0
-
 
 #########################
 # more settings
@@ -46,17 +45,15 @@ defaults:
 
 # baseurl: ""
 permalink: /blog/:slug
-timezone: America/New_York
+timezone: Asia/Kolkata
 future: false
 
 exclude:
-- README.md
-- LICENSE.md
-
-exclude: [vendor]
+  - README.md
+  - LICENSE.md
+  - vendor
 
 Blog: /blog
-Life: /life
 
 # Add general links to site pages here
 links:
