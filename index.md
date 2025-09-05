@@ -5,4 +5,4 @@ description: Here be writings
 permalink: /
 ---
 
-Here be writings. Mostly mundane, sometimes fanciful.
+A collection of thoughts—some ordinary, others a bit whimsical.
