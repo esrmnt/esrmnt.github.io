@@ -1,3 +1,62 @@
+/* Custom homepage styles for two-column post list and tags */
+.dotted-separator {
+  border: none;
+  border-top: 3px dotted #222;
+  margin: 32px 0 32px 0;
+}
+
+.post-table {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.post-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.post-date {
+  min-width: 140px;
+  color: #888;
+  font-size: 1.25em;
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  letter-spacing: 1px;
+}
+
+.post-title-wrap {
+  flex: 1;
+}
+
+.post-title-link {
+  font-size: 1.35em;
+  color: #222;
+  text-decoration: none;
+  border-bottom: 4px solid #d32f2f;
+  padding-bottom: 2px;
+  font-weight: 500;
+  transition: border-color 0.2s;
+}
+.post-title-link:hover, .post-title-link:focus {
+  border-bottom: 4px solid #b71c1c;
+}
+
+.tag-list {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.tag-label {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #222;
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  margin-right: 18px;
+  margin-bottom: 8px;
+  border-bottom: 4px solid #d32f2f;
+  padding-bottom: 2px;
+}
 /* Bear-ish: minimal, fast, readable */
 :root {
   --fg: #111;
