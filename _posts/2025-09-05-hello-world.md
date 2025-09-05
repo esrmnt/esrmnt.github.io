@@ -1,4 +1,4 @@
----
+tags: [intro, minimal]
 layout: post
 title: "Hello, world"
 ---
