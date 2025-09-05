@@ -1,4 +1,4 @@
-# Bear-ish Jekyll (GitHub Pages)
+# Esrmnt (GitHub Pages)
 
 A super-minimal blog theme inspired by Bear Blog. Works with native GitHub Pages (no plugins required).
 
