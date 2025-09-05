@@ -1,0 +1,21 @@
+title: "Bear-ish Blog"
+description: "A super-minimal blog theme for GitHub Pages"
+author: "Your Name"
+url: "https://<your-username>.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+theme: null
+permalink: /:year/:month/:day/:title/
+timezone: Asia/Kolkata
+
+# Exclude development files
+exclude:
+  - README.md
+
+# RSS
+feed:
+  path: feed.xml
