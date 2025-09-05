@@ -203,4 +203,5 @@ code {
   padding: 24px;
   color: var(--muted);
   text-align: center;
+  font-size: 60%;
 }
