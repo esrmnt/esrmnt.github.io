@@ -25,6 +25,6 @@ Have a look around, this website is already themed with **jekyllBear**. If you l
 
 #### New: Life in Weeks Interactive Timeline
 
-- Visualize your life weeks, inspired by [Wait But Why](https://waitbutwhy.com/2014/05/life-weeks.html) and [Buster Benson](https://busterbenson.com/life-in-weeks/) and cycle through key events with up/down arrows.
+
 
 Try it on the [Life in Weeks](https://knhash.in/jekyllBear/life) page!

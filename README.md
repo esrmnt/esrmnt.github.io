@@ -109,13 +109,13 @@ This also defines the bits about tags and filtering.
 
 To use the new Life in Weeks visualization:
 
-1. **Create your life data**: Copy `_data/life-in-weeks.yml` and customize it with your own life events
+
 2. **Add the life page**: Copy `life.md` and update the `start_date` and `end_year` parameters
 3. **Configure navigation**: The "Life" link will automatically appear in your navigation
 
 #### Life Data Format
 
-Events in `_data/life-in-weeks.yml` follow this structure:
+
 
 ```yaml
 'YYYY-MM-DD':
@@ -138,7 +138,7 @@ Use them as templates for your front matter.
 
 >To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`.
 
-See `life.md`, `_layouts/life-in-weeks.html`, and `assets/life-carousel.js` for implementation details.
+
 
 ## Contributing
 
