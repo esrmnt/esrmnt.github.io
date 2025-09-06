@@ -19,8 +19,8 @@ layout: compress
                         {{ post.date | date: "%b %-d, %Y" }}
                     </time>
                 </i>
+                — <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             </span>
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </li>
         {% endfor %}
     </ul>
