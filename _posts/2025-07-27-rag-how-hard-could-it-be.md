@@ -4,9 +4,8 @@ title: "RAG: How Hard Could It Be ?"
 subtitle: Getting acquainted with Retrieval-Augmented Generation
 date: 2025-07-27 23:10:00 +0000
 tags:
-- RAG
-- AI
-
+- rag
+- ai
 ---
 I've got some time to myself this week and there's bandwidth to venture into new areas. My friends and I were talking the other day, and they told me that **Retrieval-Augmented Generation (RAG)** is "fun" and worth exploring. Famous last words, but here we are.
 
