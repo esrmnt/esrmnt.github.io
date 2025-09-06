@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "RAG: Information Retrieval - How Does Search Actually Work?"
-subtitle: Getting acquainted with Retrieval-Augmented Generation
 date: 2025-09-05 23:40:00 +0000
 tags:
 - rag

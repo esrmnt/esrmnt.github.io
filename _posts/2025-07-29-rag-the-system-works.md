@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "RAG: The System Works (Terms and Conditions Apply)"
-subtitle: Getting acquainted with Retrieval-Augmented Generation
 date: 2025-08-02 10:35:00 +0000
 tags:
 - rag

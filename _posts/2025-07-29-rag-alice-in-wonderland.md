@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "RAG: Alice in Wonderland"
-subtitle: Getting acquainted with Retrieval-Augmented Generation
 date: 2025-07-29 10:08:00 +0000
 tags:
 - rag

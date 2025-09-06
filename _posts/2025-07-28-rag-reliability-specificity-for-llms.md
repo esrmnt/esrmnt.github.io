@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "RAG: Reliability and Specificity for LLMs"
-subtitle: Getting acquainted with Retrieval-Augmented Generation
 date: 2025-07-28 13:10:00 +0000
 tags:
 - rag
