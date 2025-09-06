@@ -4,7 +4,6 @@ title: RAG: How Hard Could It Be ?
 subtitle: Getting acquainted with Retrieval-Augmented Generation
 date: 2025-07-27 23:10:00 +0000
 tags:
-- general
 - RAG
 - AI
 
